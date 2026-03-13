@@ -16,6 +16,13 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Function to get Netlify Image CDN URL
+  const getOptimizedUrl = (url, w) => {
+    if (!url || url.startsWith("http")) return url;
+    const cleanUrl = url.startsWith("/") ? url : `/${url}`;
+    return `/.netlify/images?url=${encodeURIComponent(cleanUrl)}&w=${w}&q=80`;
+  };
+
   //************************ */
   return (
     <section id="home" className="hero-section">
@@ -23,13 +30,15 @@ const Hero = () => {
         <AnimatePresence mode="wait">
           <motion.img
             key={heroSlides[currentSlide].url}
-            src={heroSlides[currentSlide].url}
+            src={getOptimizedUrl(heroSlides[currentSlide].url, 1200)}
             alt="Giardino Background"
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 2, ease: "easeOut" }}
             className="hero-bg-image"
+            fetchpriority={currentSlide === 0 ? "high" : "auto"}
+            loading={currentSlide === 0 ? "eager" : "lazy"}
           />
         </AnimatePresence>
         <div className="hero-overlay"></div>
@@ -77,7 +86,7 @@ const Hero = () => {
             className={`hero-thumb ${currentSlide === index ? "active" : ""}`}
             onClick={() => setCurrentSlide(index)}
           >
-            <img src={slide.url} alt={`Thumb ${index}`} />
+            <img src={getOptimizedUrl(slide.url, 100)} alt={`Thumb ${index}`} loading="lazy" />
           </div>
         ))}
       </div>

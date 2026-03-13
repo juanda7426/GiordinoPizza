@@ -24,6 +24,7 @@ const Footer = ({ infoData }) => {
               alt="Giardino Logo"
               height="80"
               className="mb-3"
+              loading="lazy"
             />
             <p className="footer-description pe-lg-4">
               {t(

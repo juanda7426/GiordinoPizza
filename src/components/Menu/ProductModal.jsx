@@ -160,6 +160,7 @@ const ProductModal = () => {
                 alt={t(product.name)}
                 className="img-fluid rounded-extra shadow-sm mb-4"
                 style={{ width: "100%", height: "300px", objectFit: "cover" }}
+                width={600}
               />
               <p className="text-muted small">{t(product.description)}</p>
             </div>

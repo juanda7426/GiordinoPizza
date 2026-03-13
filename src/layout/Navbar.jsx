@@ -37,6 +37,8 @@ const CustomNavbar = () => {
             height={scrolled ? "65" : "70"}
             className="navbar-logo-img transition-all"
             style={{ borderRadius: "18px" }}
+            fetchpriority="high"
+            decoding="async"
           />
         </Navbar.Brand>
 

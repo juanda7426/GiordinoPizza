@@ -19,6 +19,7 @@ const MenuCard = ({ item, onSelect }) => {
           src={item.image}
           alt={t(item.name)}
           className="menu-card-img w-100 h-100 object-fit-cover"
+          width={400}
         />
         <div className="category-badge">{t(item.category)}</div>
         <div className="customizable-hint">
