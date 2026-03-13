@@ -1,0 +1,68 @@
+.sizes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.size-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+.size-item:hover {
+  transform: translateX(15px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(243, 114, 44, 0.1);
+}
+
+.size-circle {
+  width: 70px;
+  height: 70px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.size-item:hover .size-circle {
+  background: var(--primary-color);
+  color: white;
+}
+
+.size-abbr {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.item-S .size-circle {
+  width: 50px;
+  height: 50px;
+}
+.item-M .size-circle {
+  width: 65px;
+  height: 65px;
+}
+.item-L .size-circle {
+  width: 80px;
+  height: 80px;
+}
+.item-XL .size-circle {
+  width: 95px;
+  height: 95px;
+}
+
+@media (max-width: 768px) {
+  .size-item:hover {
+    transform: translateY(-5px);
+  }
+}

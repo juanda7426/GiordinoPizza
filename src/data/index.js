@@ -1,0 +1,864 @@
+export const menuData = [
+  // Vegetarianas
+  {
+    id: 1,
+    name: "Napolitana/Neapolitan",
+    description: "Tomate en rodajas y albahaca/Tomato slices and basil.",
+    price: {
+      Baby: "$12.000",
+      Personal: "$20.000",
+      Giardino: "$30.000",
+      Milenium: "$43.000",
+      Big: "$57.000",
+    },
+    image: "/images/pizza1.avif",
+    category: "Vegetarianas / Vegetarian",
+  },
+  {
+    id: 2,
+    name: "Vegetales/Vegetables",
+    description: "Vegetales frescos/Fresh vegetables.",
+    price: {
+      Baby: "$12.000",
+      Personal: "$22.000",
+      Giardino: "$30.000",
+      Milenium: "$43.000",
+      Big: "$57.000",
+    },
+    image: "/images/pizza2.avif",
+    category: "Vegetarianas / Vegetarian",
+  },
+  {
+    id: 3,
+    name: "Champiñones/Mushrooms",
+    description: "Champiñones frescos/Fresh mushrooms.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$22.000",
+      Giardino: "$30.000",
+      Milenium: "$43.000",
+      Big: "$57.000",
+    },
+    image: "/images/pizza3.avif",
+    category: "Vegetarianas / Vegetarian",
+  },
+  {
+    id: 4,
+    name: "Vegetariana Gourmet/Vegetarian Gourmet",
+    description:
+      "Vegetales salteados en aceite de oliva/Vegetables sauteed in olive oil.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$33.000",
+      Milenium: "$45.000",
+      Big: "$57.000",
+    },
+    image: "/images/pizza4.avif",
+    category: "Vegetarianas / Vegetarian",
+  },
+  // Pizzas
+  {
+    id: 5,
+    name: "Hawaiana/Hawaian",
+    description: "Pizza con piña y jamón/Pizza with pineapple and ham.",
+    price: {
+      Baby: "$10.000",
+      Personal: "$20.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$53.000",
+    },
+    image: "/images/pizza5.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 6,
+    name: "Hawaiana - Tocineta/Hawaian - Bacon",
+    description: "Pizza con piña y tocineta/Pizza with pineapple and bacon.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$33.000",
+      Milenium: "$45.000",
+      Big: "$55.000",
+    },
+    image: "/images/pizza6.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 7,
+    name: "Jamón/Ham",
+    description: "Pizza con jamón/Pizza with ham.",
+    price: {
+      Baby: "$9.000",
+      Personal: "$20.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$53.000",
+    },
+    image: "/images/pizza1.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 8,
+    name: "Salami/Salami",
+    description: "Pizza con salami/Pizza with salami.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$22.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "/images/pizza2.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 9,
+    name: "Tocineta - Maiz/Bacon - Corn",
+    description: "Pizza con tocineta y maiz/Pizza with bacon and corn.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$24.000",
+      Giardino: "$35.000",
+      Milenium: "$47.000",
+      Big: "$60.000",
+    },
+    image: "/images/pizza3.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 10,
+    name: "Ranchera (Salchicha y Maiz)/Ranchera (Sausage and Corn)",
+    description: "Pizza con salchicha y maiz/Pizza with sausage and corn.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$22.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "images/pizza4.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 11,
+    name: "Pollo/Chicken",
+    description: "Pizza con pollo/Pizza with chicken.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "images/pizza5.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 12,
+    name: "Pollo BBQ/Chicken BBQ",
+    description:
+      "Pizza con pollo en salsa BBQ/Pizza with chicken in BBQ sauce.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "images/pizza6.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 13,
+    name: "Pollo - Champiñones/Chicken - Mushrooms",
+    description:
+      "Pizza con pollo y champiñones/Pizza with chicken and mushrooms.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$24.000",
+      Giardino: "$32.000",
+      Milenium: "$44.000",
+      Big: "$57.000",
+    },
+    image: "images/pizza1.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 14,
+    name: "Peperoni - Champiñones/Peperoni - Mushrooms",
+    description:
+      "Pizza con peperoni y champiñones/Pizza with peperoni and mushrooms.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$32.000",
+      Milenium: "$45.000",
+      Big: "$57.000",
+    },
+    image: "images/pizza2.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 15,
+    name: "Peperoni/Peperoni",
+    description: "Pizza con peperoni/Pizza with peperoni.",
+    price: {
+      Baby: "$12.000",
+      Personal: "$22.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$57.000",
+    },
+    image: "images/pizza3.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 16,
+    name: "Colombiana/Colombian",
+    description:
+      "Pizza con chorizo, maíz y aguacate/Pizza with chorizo, corn and avocado.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$57.000",
+    },
+    image: "images/pizza4.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 17,
+    name: "Mixta/Mixed",
+    description:
+      "Pizza con jamón, salami, salchicha, cebolla, pimentón y tomate/Pizza with ham, salami, sausage, onion, pepper and tomato.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "images/pizza5.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 18,
+    name: "Carnes/Meats",
+    description:
+      "Pizza con salami, salchicha, jamón, pollo y tocineta/Pizza with salami, sausage, ham, chicken and bacon.",
+    price: {
+      Baby: "$14.000",
+      Personal: "$25.000",
+      Giardino: "$35.000",
+      Milenium: "$47.000",
+      Big: "$60.000",
+    },
+    image: "images/pizza6.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 19,
+    name: "Queso/Cheese",
+    description: "Pizza con queso/Pizza with cheese.",
+    price: {
+      Baby: "$11.000",
+      Personal: "$21.000",
+      Giardino: "$28.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "images/pizza1.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 20,
+    name: "Tropical/Tropical",
+    description:
+      "Pizza con piña, cereza y breva/Pizza with pineapple, cherry and fig.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "images/pizza2.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 21,
+    name: "Pizza Picante/Spicy Pizza",
+    description:
+      "Pizza con boloñesa picante, pimentón, nachos con guacamole/Pizza with spicy bolognese, pepper and nachos with guacamole.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "images/pizza3.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 22,
+    name: "Paisa/Paisa",
+    description:
+      "Pizza con carne boloñesa, chorizo, maíz, frijol y maduritos/Pizza with bolognese meat, chorizo, corn, beans and maduritos.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "images/pizza4.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 23,
+    name: "De La Granja/Farm",
+    description:
+      "Pizza con pollo, tocineta, maíz, cebolla y albahaca/Pizza with chicken, bacon, corn, onion and basil.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "images/pizza5.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 24,
+    name: "Mediterranea/Mediterranean",
+    description:
+      "Pizza con carne boloñesa, tomate, cebolla, pimentón, zukini y albahaca/Pizza with bolognese meat, tomato, onion, pepper, zukini and basil.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "images/pizza6.avif",
+    category: "Pizzas / Pizzas",
+  },
+  {
+    id: 25,
+    name: "Americana/American",
+    description:
+      "Pizza con peperoni, tocineta y tomate/Pizza with peperoni, bacon and tomato.",
+    price: {
+      Baby: "$13.000",
+      Personal: "$23.000",
+      Giardino: "$30.000",
+      Milenium: "$42.000",
+      Big: "$55.000",
+    },
+    image: "images/pizza7.avif",
+    category: "Pizzas / Pizzas",
+  },
+  // Pastas
+  {
+    id: 26,
+    name: "Lasaña Mixta/Mixed Lasagna",
+    description: "Pastas con pollo y carne /Pastas with chicken and meat.",
+    price: "$25.000",
+    image: "images/pasta1.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 27,
+    name: "Lasaña Carne/Meat Lasagna",
+    description: "Pasta con carne. / Pasta with meat.",
+    price: "$25.000",
+    image: "images/pasta2.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 28,
+    name: "Lasaña Pollo/Chicken Lasagna",
+    description: "Pasta con pollo. / Pasta with chicken.",
+    price: "$25.000",
+    image: "images/pasta3.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 29,
+    name: "Canelones/Cannelloni",
+    description:
+      "Pasta rellena de pollo, carne o mixto. / Pasta stuffed with chicken, meat, or mixed.",
+    price: "$25.000",
+    image: "images/pasta4.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 30,
+    name: "Espagueti Gratinado/Gratined Spaghetti",
+    description:
+      "Espagueti gratinado con queso. / Gratined Spaghetti with cheese.",
+    price: "$25.000",
+    image: "images/pasta1.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 31,
+    name: "Espagueti Bolognesa/Spaghetti Bolognese",
+    description:
+      "Espagueti con carne boloñesa. / Spaghetti with bolognese meat.",
+    price: "$25.000",
+    image: "images/pasta2.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 32,
+    name: "Espagueti de la Huerta/Garden Spaghetti",
+    description:
+      "Vegetales en salsa napolitana. / Vegetables in Napolitan sauce.",
+    price: "$25.000",
+    image: "images/pasta3.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 33,
+    name: "Espagueti a la Mexicana/Mexican Spaghetti",
+    description:
+      "Carne boloñesa, cebolla, tomate, maíz tierno y ají. / Bolognese meat, onion, tomato, corn, and chili pepper.",
+    price: "$25.000",
+    image: "images/pasta4.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 34,
+    name: "Fetuchini a la Carbonara/Carbonara Fettuccine",
+    description:
+      "Fetuchini preparado al estilo carbonara tradicional. / Fettuccine prepared in traditional carbonara style.",
+    price: "$26.000",
+    image: "images/pasta1.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 35,
+    name: "Fetuchini con Vegetales Gourmet/Gourmet Vegetables Fettuccine",
+    description:
+      "Vegetales salteados en aceite de oliva (pimentón, cebolla, aceitunas, zanahoria, brócoli y parmesano). / Vegetables sautéed in olive oil (pepper, onion, olives, carrot, broccoli, and parmesan).",
+    price: "$26.000",
+    image: "images/pasta2.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 36,
+    name: "Burrito Pollo - Champiñones/Chicken - Mushroom Burrito",
+    description:
+      "Tortilla de trigo rellena de pollo y champiñones./Wheat tortilla filled with chicken and mushrooms.",
+    price: "$25.000",
+    image: "images/pasta3.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 37,
+    name: "Burrito Carne/Meat Burrito",
+    description:
+      "Tortilla de trigo rellena de carne./Wheat tortilla filled with meat.",
+    price: "$25.000",
+    image: "images/pasta4.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 38,
+    name: "Burrito Jamón y Queso/Ham and Cheese Burrito",
+    description:
+      "Tortilla de trigo rellena de jamón y queso./Wheat tortilla filled with ham and cheese.",
+    price: "$25.000",
+    image: "images/pasta1.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 39,
+    name: "Burrito Mixto/Mixed Burrito",
+    description:
+      "Tortilla de trigo rellena de pollo y carne./Wheat tortilla filled with chicken and meat.",
+    price: "$25.000",
+    image: "images/pasta2.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 40,
+    name: "Burrito Hawaiano/Hawaiian Burrito",
+    description:
+      "Tortilla de trigo rellena de jamón y piña./Wheat tortilla filled with ham and pineapple.",
+    price: "$25.000",
+    image: "images/pasta3.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 41,
+    name: "Burrito Vegetariano/Vegetarian Burrito",
+    description:
+      "Tortilla de trigo rellena de vegetales./Wheat tortilla filled with vegetables.",
+    price: "$25.000",
+    image: "images/pasta4.avif",
+    category: "Pastas / Pasta",
+  },
+  {
+    id: 42,
+    name: "Burrito Gratinado Pollo Y Champiñones/Gratined Chicken and Mushroom Burrito",
+    description:
+      "Tortilla de trigo rellena de pollo y champiñones gratinada./Wheat tortilla filled with chicken and mushrooms gratin.",
+    price: "$26.000",
+    image: "images/pasta1.avif",
+    category: "Pastas / Pasta",
+  },
+  // Hamburguesas
+  {
+    id: 43,
+    name: "Hamburguesa De La Casa/House Hamburger",
+    description: "Hamburguesa de la casa./House hamburger.",
+    price: "$19.000",
+    image: "images/hamb1.avif",
+    category: "Hamburguesas / Burgers",
+  },
+  {
+    id: 44,
+    name: "Hamburguesa Sencilla/Simple Hamburger",
+    description: "Hamburguesa sencilla./Simple hamburger.",
+    price: "$16.000",
+    image: "images/hamb2.avif",
+    category: "Hamburguesas / Burgers",
+  },
+  {
+    id: 45,
+    name: "Hamburguesa Doble/Double Hamburger",
+    description: "Hamburguesa doble. / Double hamburger.",
+    price: "$18.000",
+    image: "images/hamb3.avif",
+    category: "Hamburguesas / Burgers",
+  },
+  // Maicitos
+  {
+    id: 46,
+    name: "Maicitos/Corn",
+    description:
+      "Maicitos con pollo, tocineta y queso./Corn Chips with chicken, bacon and cheese.",
+    price: "$18.000",
+    image: "images/mz1.avif",
+    category: "Maicitos / Corn Bites",
+  },
+  {
+    id: 47,
+    name: "Maicitos Mix/Mix Corn",
+    description:
+      "Maicitos con pollo, tocineta, queso, ripio de papa, salchicha y salsa de piña. / Corn bits with chicken, bacon, cheese, potato chips, sausage, and pineapple sauce.",
+    price: "$20.000",
+    image: "images/mz2.avif",
+    category: "Maicitos / Corn Bites",
+  },
+  // Sanduches
+  {
+    id: 48,
+    name: "Sanduche Pollo/Chicken Sandwich",
+    description: "Sanduche de pollo./Chicken Sandwich.",
+    price: "$16.000",
+    image: "images/snd1.avif",
+    category: "Sanduches / Sandwiches",
+  },
+  {
+    id: 49,
+    name: "Sanduche Jamón/Ham Sandwich",
+    description: "Sanduche de jamón./Ham Sandwich.",
+    price: "$14.000",
+    image: "images/snd2.avif",
+    category: "Sanduches / Sandwiches",
+  },
+  {
+    id: 50,
+    name: "Sanduche Pollo Gratinado/Gratined Chicken Sandwich",
+    description: "Sanduche de pollo gratinado./Gratined Chicken Sandwich.",
+    price: "$18.000",
+    image: "images/snd1.avif",
+    category: "Sanduches / Sandwiches",
+  },
+  // Entradas
+  {
+    id: 52,
+    name: "Mini Perros/Mini Hot Dogs",
+    description: "Mini perros./Mini Hot Dogs.",
+    price: "$6.000",
+    image: "images/mhdog.avif",
+    category: "Entradas / Appetizers",
+  },
+  {
+    id: 53,
+    name: "Tostaditas Mozzarella Caprese/Caprese Mozzarella Toast",
+    description: "Tostaditas mozzarella caprese./Caprese Mozzarella Toast.",
+    price: "$12.000",
+    image: "images/tostqueso.avif",
+    category: "Entradas / Appetizers",
+  },
+  {
+    id: 54,
+    name: "Pancito de ajo/Garlic Bread",
+    description: "Pancito de ajo./Garlic Bread.",
+    price: "$6.000",
+    image: "images/panajo.avif",
+    category: "Entradas / Appetizers",
+  },
+];
+
+export const drinksData = [
+  // Limonadas
+  {
+    id: 101,
+    name: "Limonada Coco/Coconut Lemonade",
+    description: "Limonada de coco./Coconut Lemonade.",
+    price: "$12.000",
+    image: "images/lmn1.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 102,
+    name: "Limonada Cerezada/Cherry Lemonade",
+    description: "Limonada cerezada./Cherry Lemonade.",
+    price: "$10.000",
+    image: "images/lmn2.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 103,
+    name: "Limonada Natural/Natural Lemonade",
+    description: "Limonada natural./Natural Lemonade.",
+    price: "$9.000",
+    image: "images/lmn3.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 104,
+    name: "Limonada Hierbabuena/Mint Lemonade",
+    description: "Limonada de hierbabuena./Mint Lemonade.",
+    price: "$10.000",
+    image: "images/lmn1.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 105,
+    name: "Limonada Mango/Mango Lemonade",
+    description: "Limonada de mango./Mango Lemonade.",
+    price: "$10.000",
+    image: "images/lmn2.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 106,
+    name: "Limonada Sandia/Watermelon Lemonade",
+    description: "Limonada de sandia./Watermelon Lemonade.",
+    price: "$10.000",
+    image: "images/lmn3.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 107,
+    name: "Limonada Brasileña/Brazilian Lemonade",
+    description: "Limonada brasileña./Brazilian Lemonade.",
+    price: "$10.000",
+    image: "images/lmn1.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 108,
+    name: "Limonada De Verano/Summer Lemonade",
+    description: "Limonada de verano./Summer Lemonade.",
+    price: "$10.000",
+    image: "images/lmn3.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 109,
+    name: "Limonada De Aguacate/Avocado Lemonade",
+    description: "Limonada de aguacate./Avocado Lemonade.",
+    price: "$10.000",
+    image: "images/lmn2.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 110,
+    name: "Limonada Hierbabuena Piña/Mint Pineapple Lemonade",
+    description: "Limonada de hierbabuena y piña./Mint Pineapple Lemonade.",
+    price: "$12.000",
+    image: "images/lmn1.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 111,
+    name: "Milo/Milo",
+    description: "Leche con Milo./Milk with Milo.",
+    price: "$10.000",
+    image: "images/milo.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 112,
+    name: "Malteada/Milkshake",
+    description: "Malteada./Milkshake.",
+    price: "$10.000",
+    image: "images/milk.avif",
+    category: "Bebidas / Beverages",
+  },
+  {
+    id: 113,
+    name: "Gaseosas/Soft Drinks",
+    description: "Gaseosas./Soft Drinks.",
+    price: "$6.000",
+    image: "images/cocacola.avif",
+    category: "Bebidas / Beverages",
+  },
+  // Jugos
+  {
+    id: 114,
+    name: "Jugo de Lulo/Lulo Juice",
+    description: "Jugo de lulo en agua o leche. / Lulo juice in water or milk.",
+    price: {
+      "En Agua / In Water": "$7.000",
+      "En Leche / In Milk": "$8.000",
+    },
+    image: "images/jg1.avif",
+    category: "Jugos / Juices",
+  },
+  {
+    id: 115,
+    name: "Jugo de Mango/Mango Juice",
+    description:
+      "Jugo de mango en agua o leche. / Mango juice in water or milk.",
+    price: {
+      "En Agua / In Water": "$7.000",
+      "En Leche / In Milk": "$8.000",
+    },
+    image: "images/jg2.avif",
+    category: "Jugos / Juices",
+  },
+  {
+    id: 116,
+    name: "Jugo de Guanabana/Soursop Juice",
+    description:
+      "Jugo de guanabana en agua o leche. / Soursop juice in water or milk.",
+    price: {
+      "En Agua / In Water": "$7.000",
+      "En Leche / In Milk": "$8.000",
+    },
+    image: "images/jg3.avif",
+    category: "Jugos / Juices",
+  },
+  {
+    id: 117,
+    name: "Jugo de Mora/Blackberry Juice",
+    description:
+      "Jugo de mora en agua o leche. / Blackberry juice in water or milk.",
+    price: {
+      "En Agua / In Water": "$7.000",
+      "En Leche / In Milk": "$8.000",
+    },
+    image: "images/jg1.avif",
+    category: "Jugos / Juices",
+  },
+  {
+    id: 118,
+    name: "Jugo de Maracuyá/Passion Fruit Juice",
+    description:
+      "Jugo de maracuyá en agua o leche. / Passion fruit juice in water or milk.",
+    price: {
+      "En Agua / In Water": "$7.000",
+      "En Leche / In Milk": "$8.000",
+    },
+    image: "images/jg2.avif",
+    category: "Jugos / Juices",
+  },
+  {
+    id: 119,
+    name: "Jugo de Fresa/Strawberry Juice",
+    description:
+      "Jugo de fresa en agua o leche. / Strawberry juice in water or milk.",
+    price: {
+      "En Agua / In Water": "$7.000",
+      "En Leche / In Milk": "$8.000",
+    },
+    image: "images/jg3.avif",
+    category: "Jugos / Juices",
+  },
+  // Cervezas
+  {
+    id: 120,
+    name: "Cerveza Club Colombia/Club Colombia Beer",
+    description: "Cerveza Club Colombia.",
+    price: "$10.000",
+    image: "images/club.avif",
+    category: "Cervezas / Beers",
+  },
+  {
+    id: 121,
+    name: "Cerveza Pilsen/Pilsen Beer",
+    description: "Cerveza Pilsen.",
+    price: "$10.000",
+    image: "images/pilsen.avif",
+    category: "Cervezas / Beers",
+  },
+  {
+    id: 122,
+    name: "Cerveza Aguila/Aguila Beer",
+    description: "Cerveza Aguila.",
+    price: "$10.000",
+    image: "images/aguila.avif",
+    category: "Cervezas / Beers",
+  },
+  {
+    id: 123,
+    name: "Cerveza Aguila Light/Aguila Light Beer",
+    description: "Cerveza Aguila Light.",
+    price: "$10.000",
+    image: "images/aguilaligh.avif",
+    category: "Cervezas / Beers",
+  },
+];
+
+export const infoData = {
+  address: "Carrera 3 Córdoba # 8 - 02, Jardín Antioquia",
+  phone: "3207643590",
+  email: "giardino-2011@hotmail.com",
+  website: "https://juanda7426.github.io/Juanda-Code/",
+};
+
+export const heroSlides = [
+  {
+    type: "image",
+    title: "La Verdadera Pizza / Real Italian Pizza",
+    highlight: "Artesanal / Artisan",
+    subtitle:
+      "Masa madurada por 48 horas e ingredientes premium seleccionados para brindarte una explosión de sabor italiano en cada bocado. / 48-hour matured dough and premium ingredients selected to give you an explosion of Italian flavor in every bite.",
+    url: "/images/VerdaderaPizza.avif",
+  },
+  {
+    type: "image",
+    title: "Pastas que Enamoran / Pastas to Fall in Love With",
+    highlight: "al Dente",
+    subtitle:
+      "Recetas tradicionales transmitidas por generaciones, preparadas al momento con salsas de la casa y el toque secreto de Giardino. / Traditional recipes handed down through generations, prepared to order with house sauces and the Giardino secret touch.",
+    url: "/images/VerdaderaPasta.avif",
+  },
+  {
+    type: "image",
+    title: "Momentos para / Moments to",
+    highlight: "Compartir / Share",
+    subtitle:
+      "Giardino es el lugar donde la buena comida y la mejor compañía se encuentran. Ven y vive la experiencia Giardino con nosotros. / Giardino is the place where good food and the best company meet. Come and live the Giardino experience with us.",
+    url: "/images/LocalGPP.avif",
+  },
+];
+
+// Keeping these empty to avoid breaking components that import them
+export const toppingsData = [];
+export const saucesData = [];
+export const flavorsData = [];

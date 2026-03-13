@@ -1,0 +1,96 @@
+.bg-dark-section {
+  background-color: #0c0c0c;
+  padding: 100px 0;
+}
+
+.toppings-bg-accent {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 16, 124, 0.05) 0%,
+    transparent 70%
+  );
+  z-index: 1;
+}
+
+.text-light-grey {
+  color: #adb5bd;
+}
+
+.toppings-scroll-container {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.toppings-track {
+  display: flex;
+  gap: 30px;
+  animation: scroll 40s linear infinite;
+  width: max-content;
+}
+
+.toppings-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 15px));
+  }
+}
+
+.topping-card {
+  width: 220px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 16, 124, 0.1);
+  border-radius: 30px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.topping-card:hover {
+  background: rgba(255, 16, 124, 0.05);
+  border-color: var(--primary-pink);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.topping-img-holder {
+  width: 180px;
+  height: 180px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  background: #1a1a1a;
+}
+
+.topping-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.topping-card:hover .topping-overlay {
+  opacity: 1;
+}
+
+.topping-info h6 {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.tracking-widest {
+  letter-spacing: 0.2em;
+}
+
+.italic {
+  font-style: italic;
+}
