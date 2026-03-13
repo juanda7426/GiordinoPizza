@@ -1,27 +1,72 @@
 .fallback-image-container {
-  background: linear-gradient(135deg, #fff 0%, #ffd6e8 100%);
+  position: relative;
+  background-color: #3286018c;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  min-height: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.fallback-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  z-index: 1;
 }
 
 .fallback-content {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
-  animation: fadeIn 0.5s ease;
+  padding: 15px;
+  width: 100%;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.fallback-logo {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.fallback-text {
+  color: white;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
+  letter-spacing: 1.8px;
+  margin-top: 15px;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+  .fallback-text {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    letter-spacing: 1.8px;
   }
 }

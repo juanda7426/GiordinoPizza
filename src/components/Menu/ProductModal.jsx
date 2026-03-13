@@ -61,8 +61,9 @@ const ProductModal = () => {
   useEffect(() => {
     if (product) {
       let base = isMultiPrice ? product.price[selectedSize] : product.price;
-      if (!base) base = isMultiPrice ? Object.values(product.price)[0] : product.price;
-      
+      if (!base)
+        base = isMultiPrice ? Object.values(product.price)[0] : product.price;
+
       let baseInt = parseInt(base.replace(/[^0-9]/g, ""));
 
       const toppingsTotal = selectedToppings.reduce((acc, topping) => {
@@ -134,6 +135,7 @@ const ProductModal = () => {
     }
   };
 
+  //**************** */
   return (
     <Modal
       show={isOpen}
@@ -144,7 +146,9 @@ const ProductModal = () => {
     >
       <Modal.Header closeButton>
         <Modal.Title className="h-premium">
-          {mode === "edit" ? `${t("Editar / Edit")} ${t(product.name)}` : t(product.name)}
+          {mode === "edit"
+            ? `${t("Editar / Edit")} ${t(product.name)}`
+            : t(product.name)}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="px-4 pb-4 overflow-x-hidden">
@@ -163,8 +167,15 @@ const ProductModal = () => {
           <Col md={7}>
             {isMultiPrice && (
               <div className="mb-4">
-                <h6 className="fw-bold mb-3">{t("Elige una opción: / Choose an option:")}</h6>
-                <div className="d-flex flex-wrap gap-2">
+                <h6 className="fw-bold mb-3">
+                  {t("Elige una opción: / Choose an option:")}
+                </h6>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
                   {Object.keys(product.price).map((size) => (
                     <button
                       key={size}
@@ -313,9 +324,9 @@ const ProductModal = () => {
                       >
                         <div className="d-flex justify-content-between align-items-center">
                           <span className="text-truncate">{topping.name}</span>
-                          {selectedToppings.find((t) => t.id === topping.id) && (
-                            <div className="dot-selected"></div>
-                          )}
+                          {selectedToppings.find(
+                            (t) => t.id === topping.id,
+                          ) && <div className="dot-selected"></div>}
                         </div>
                         <small className="fw-bold">{topping.price}</small>
                       </div>
@@ -330,7 +341,9 @@ const ProductModal = () => {
               style={{ bottom: "-1px" }}
             >
               <div>
-                <span className="text-muted d-block small">{t("Total estimado / Estimated Total")}</span>
+                <span className="text-muted d-block small">
+                  {t("Total estimado / Estimated Total")}
+                </span>
                 <span className="h4 fw-bold text-primary-color mb-0">
                   ${totalPrice.toLocaleString("es-CO")}
                 </span>

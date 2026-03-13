@@ -70,18 +70,6 @@ const Hero = () => {
         </Row>
       </Container>
 
-      <motion.div
-        initial={{ scale: 0, rotate: -20 }}
-        animate={{ scale: 1, rotate: -10 }}
-        transition={{ delay: 1, type: "spring" }}
-        className="artisan-badge-premium d-none d-lg-flex"
-      >
-        <div className="badge-inner">
-          <span>100%</span>
-          <p>{t("Artesanal / Artisan")}</p>
-        </div>
-      </motion.div>
-
       <div className="hero-thumbnails d-none d-md-flex">
         {heroSlides.map((slide, index) => (
           <div

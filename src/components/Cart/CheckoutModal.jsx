@@ -43,6 +43,7 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
     });
   };
 
+  //**************** */
   return (
     <Modal
       show={show}
@@ -53,7 +54,9 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
     >
       <Modal.Header closeButton className="border-0 px-4 pt-4">
         <Modal.Title className="h-premium fs-2">
-          {step === 1 ? t("Datos de Envío / Shipping Details") : t("Confirma tu pedido / Confirm your order")}
+          {step === 1
+            ? t("Datos de Envío / Shipping Details")
+            : t("Confirma tu pedido / Confirm your order")}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="px-4 pb-4">
@@ -77,7 +80,9 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
               </Col>
               <Col md={6}>
                 <Form.Group>
-                  <Form.Label className="small fw-bold">{t("Teléfono / Phone")}</Form.Label>
+                  <Form.Label className="small fw-bold">
+                    {t("Teléfono / Phone")}
+                  </Form.Label>
                   <Form.Control
                     type="text"
                     name="phone"
@@ -96,7 +101,9 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
                   <Form.Control
                     type="text"
                     name="address"
-                    placeholder={t("Ej: Calle 45 # 12-34 / e.g. 45th St # 12-34")}
+                    placeholder={t(
+                      "Ej: Calle 45 # 12-34 / e.g. 45th St # 12-34",
+                    )}
                     value={customerData.address}
                     onChange={handleInputChange}
                     className="custom-input"
@@ -105,7 +112,9 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
               </Col>
               <Col md={4}>
                 <Form.Group>
-                  <Form.Label className="small fw-bold">{t("Barrio / Neighborhood")}</Form.Label>
+                  <Form.Label className="small fw-bold">
+                    {t("Barrio / Neighborhood")}
+                  </Form.Label>
                   <Form.Control
                     type="text"
                     name="neighborhood"
@@ -127,7 +136,9 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
                     onChange={handleInputChange}
                     className="custom-input"
                   >
-                    <option value="">{t("Selecciona una opción / Select an option")}</option>
+                    <option value="">
+                      {t("Selecciona una opción / Select an option")}
+                    </option>
                     <option value="Efectivo">{t("Efectivo / Cash")}</option>
                     <option value="Nequi">Nequi</option>
                     <option value="Daviplata">Daviplata</option>
@@ -140,13 +151,17 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
               <Col md={12}>
                 <Form.Group>
                   <Form.Label className="small fw-bold">
-                    {t("Notas o Referencias (Opcional) / Notes or References (Optional)")}
+                    {t(
+                      "Notas o Referencias (Opcional) / Notes or References (Optional)",
+                    )}
                   </Form.Label>
                   <Form.Control
                     as="textarea"
                     rows={2}
                     name="notes"
-                    placeholder={t("Ej: Apartamento 402, dejar en portería... / e.g. Apt 402, leave at the lobby...")}
+                    placeholder={t(
+                      "Ej: Apartamento 402, dejar en portería... / e.g. Apt 402, leave at the lobby...",
+                    )}
                     value={customerData.notes}
                     onChange={handleInputChange}
                     className="custom-input"
@@ -156,7 +171,7 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
             </Row>
 
             <div className="mt-4 pt-3 border-top d-flex justify-content-end">
-                <button
+              <button
                 type="button"
                 className="btn-premium px-5"
                 disabled={!isFormValid}
@@ -175,19 +190,23 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
                     {t("Información de Entrega / Delivery Information")}
                   </h6>
                   <p className="mb-1 small">
-                    <strong>{t("Cliente / Customer")}:</strong> {customerData.name}
+                    <strong>{t("Cliente / Customer")}:</strong>{" "}
+                    {customerData.name}
                   </p>
                   <p className="mb-1 small">
-                    <strong>{t("Barrio / Neighborhood")}:</strong> {customerData.neighborhood}
+                    <strong>{t("Barrio / Neighborhood")}:</strong>{" "}
+                    {customerData.neighborhood}
                   </p>
                   <p className="mb-1 small">
-                    <strong>{t("Dir / Address")}:</strong> {customerData.address}
+                    <strong>{t("Dir / Address")}:</strong>{" "}
+                    {customerData.address}
                   </p>
                   <p className="mb-1 small">
                     <strong>{t("Tel / Phone")}:</strong> {customerData.phone}
                   </p>
                   <p className="mb-1 small">
-                    <strong>{t("Pago / Payment")}:</strong> {customerData.paymentMethod}
+                    <strong>{t("Pago / Payment")}:</strong>{" "}
+                    {customerData.paymentMethod}
                   </p>
                 </Col>
                 <Col sm={7}>

@@ -13,20 +13,26 @@ import "./footer.css";
 const Footer = ({ infoData }) => {
   const { t } = useLanguage();
 
+  //********************** */
   return (
     <footer id="contact" className="footer-section pt-5 pb-4">
       <Container>
         <Row className="gy-4">
           <Col lg={4} className="text-center text-lg-start">
             <img
-              src="/logo-white.jpg"
+              src="images/LogoIn.avif"
               alt="Giardino Logo"
               height="80"
               className="mb-3"
             />
             <p className="footer-description pe-lg-4">
-              {t("La máxima expresión de la pizza artesanal. / The ultimate expression of artisanal pizza.")} <br />
-              {t("Momentos deliciosos creados para ser inolvidables. / Delicious moments created to be unforgettable.")}
+              {t(
+                "La máxima expresión de la pizza artesanal. / The ultimate expression of artisanal pizza.",
+              )}{" "}
+              <br />
+              {t(
+                "Momentos deliciosos creados para ser inolvidables. / Delicious moments created to be unforgettable.",
+              )}
             </p>
             <div className="d-flex justify-content-center justify-content-lg-start gap-3 mt-4">
               <a href="#" className="social-icon">
@@ -51,7 +57,9 @@ const Footer = ({ infoData }) => {
             <div className="footer-info-item d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
               <Clock className="me-3" size={20} />
               <span>
-                {t("Lun - Sáb: 11:00 AM - 9:30 PM / Mon - Sat: 11:00 AM - 9:30 PM")}
+                {t(
+                  "Lun - Sáb: 11:00 AM - 9:30 PM / Mon - Sat: 11:00 AM - 9:30 PM",
+                )}
                 <br />
                 {t("Dom: 1:00 PM - 9:00 PM / Sun: 1:00 PM - 9:00 PM")}
               </span>
@@ -81,7 +89,8 @@ const Footer = ({ infoData }) => {
         <hr className="my-5 footer-divider" />
         <div className="text-center footer-bottom-text">
           <p>
-            © 2024 Giardino Pizza y Pasta | {t("Sabor Inigualable / Unmatched Flavor")} | Developed by{" "}
+            © 2024 Giardino Pizza y Pasta |{" "}
+            {t("Sabor Inigualable / Unmatched Flavor")} | Developed by{" "}
             <a
               href={infoData.website}
               target="_blank"

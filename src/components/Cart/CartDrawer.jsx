@@ -58,7 +58,8 @@ const CartDrawer = () => {
     message += `*${t("Barrio / Neighborhood")}:* ${customerData.neighborhood}\n`;
     message += `*${t("Teléfono / Phone")}:* ${customerData.phone}\n`;
     message += `*${t("Método de Pago / Payment Method")}:* ${customerData.paymentMethod}\n`;
-    if (customerData.notes) message += `*${t("Notas / Notes")}:* ${customerData.notes}\n\n`;
+    if (customerData.notes)
+      message += `*${t("Notas / Notes")}:* ${customerData.notes}\n\n`;
 
     message += `\n*${t("Detalle del Pedido / Order Detail")}:*\n`;
     cart.forEach((item) => {
@@ -87,7 +88,9 @@ const CartDrawer = () => {
 
     Swal.fire({
       title: t("¡Pedido Enviado! / Order Sent!"),
-      text: t("Tu pedido ha sido enviado a WhatsApp correctamente. ¡Gracias por elegir Giardino Pizza y Pasta! / Your order has been successfully sent to WhatsApp. Thank you for choosing Giardino Pizza & Pasta!"),
+      text: t(
+        "Tu pedido ha sido enviado a WhatsApp correctamente. ¡Gracias por elegir Giardino Pizza y Pasta! / Your order has been successfully sent to WhatsApp. Thank you for choosing Giardino Pizza & Pasta!",
+      ),
       icon: "success",
       confirmButtonColor: "#f3722c",
       confirmButtonText: t("Genial / Great"),
@@ -98,6 +101,7 @@ const CartDrawer = () => {
     });
   };
 
+  //********************** */
   return (
     <>
       <Offcanvas
@@ -106,8 +110,8 @@ const CartDrawer = () => {
         placement="end"
         className="cart-drawer"
       >
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title className="h-premium fs-3">
+        <Offcanvas.Header closeButton className="text-white">
+          <Offcanvas.Title className="h-premium text-white fs-3">
             {t("Tu Carrito / Your Cart")}
           </Offcanvas.Title>
         </Offcanvas.Header>
@@ -115,7 +119,9 @@ const CartDrawer = () => {
           {cart.length === 0 ? (
             <div className="text-center py-5">
               <ShoppingBag size={60} className="text-muted mb-3 opacity-25" />
-              <p className="text-muted">{t("Tu carrito está vacío. / Your cart is empty.")}</p>
+              <p className="text-muted">
+                {t("Tu carrito está vacío. / Your cart is empty.")}
+              </p>
               <button
                 className="btn-premium btn-sm"
                 onClick={() => setIsCartOpen(false)}
@@ -220,14 +226,16 @@ const CartDrawer = () => {
 
               <div className="cart-footer mt-4 border-top pt-4">
                 <div className="d-flex justify-content-between align-items-center mb-4">
-                  <h5 className="mb-0 fw-bold">{t("Total del pedido: / Order total:")}</h5>
+                  <h5 className="mb-0 fw-bold">
+                    {t("Total del pedido: / Order total:")}
+                  </h5>
                   <h4 className="mb-0 fw-black text-primary-color">
                     ${cartTotal.toLocaleString("es-CO")}
                   </h4>
                 </div>
 
                 <button
-                  className="btn-premium w-100 py-3 fs-5"
+                  className="btn-premium w-100 py-2 fs-6"
                   onClick={handleOpenCheckout}
                 >
                   {t("Continuar al pago / Checkout")}
@@ -235,7 +243,6 @@ const CartDrawer = () => {
                 <a
                   href="#menu"
                   className="btn-link-custom w-100 mt-2 text-center d-block"
-                  style={{ textDecoration: "none" }}
                   onClick={() => setIsCartOpen(false)}
                 >
                   {t("Continuar comprando / Continue shopping")}

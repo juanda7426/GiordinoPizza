@@ -826,9 +826,12 @@ export const drinksData = [
 
 export const infoData = {
   address: "Carrera 3 Córdoba # 8 - 02, Jardín Antioquia",
+  location:
+    "https://www.google.com/maps/place/Cra.+3+%238-2,+Jard%C3%ADn,+Antioquia/@5.5998871,-75.8228106,17z/data=!3m1!4b1!4m5!3m4!1s0x8e46539d21a4f33d:0x440ef907bbef06c1!8m2!3d5.5998818!4d-75.8202357?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D",
   phone: "3207643590",
   email: "giardino-2011@hotmail.com",
   website: "https://juanda7426.github.io/Juanda-Code/",
+  openingHours: `Lun - Vie: 04pm - 10pm y Sab - Dom: 9am - 10pm / Mon - Fri: 04pm - 10pm and Sat - Sun: 9am - 10pm`,
 };
 
 export const heroSlides = [

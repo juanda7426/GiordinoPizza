@@ -7,6 +7,7 @@ import Menu from "./components/Menu/Menu";
 import Info from "./components/Info/Info";
 import CartDrawer from "./components/Cart/CartDrawer";
 import ProductModal from "./components/Menu/ProductModal";
+import FloatingCartButton from "./components/Cart/FloatingCartButton";
 
 function App() {
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
     return () => window.removeEventListener("scroll", revealOnScroll);
   }, []);
 
+  //**************************** */
   return (
     <LanguageProvider>
       <CartProvider>
@@ -39,10 +41,12 @@ function App() {
           <Info />
           <CartDrawer />
           <ProductModal />
+          <FloatingCartButton />
         </Layout>
       </CartProvider>
     </LanguageProvider>
   );
 }
+
 
 export default App;

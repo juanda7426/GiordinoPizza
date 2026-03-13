@@ -7,6 +7,7 @@ const MenuCard = ({ item, onSelect }) => {
   const { t } = useLanguage();
   const isMultiPrice = typeof item.price === "object";
 
+  //*************** */
   return (
     <Card
       className="premium-card h-100"

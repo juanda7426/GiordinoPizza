@@ -21,86 +21,71 @@ const CustomNavbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  //**************************** */
   return (
-    <Navbar 
-      expand="lg" 
+    <Navbar
+      expand="lg"
       className={`fixed-top custom-nav ${scrolled ? "scrolled" : ""}`}
       expanded={expanded}
       onToggle={setExpanded}
     >
       <Container>
-        <Navbar.Brand href="#home" className="d-flex align-items-center">
+        <Navbar.Brand href="#home" className="d-flex align-items-center ">
           <img
-            src="/logo-white.jpg"
+            src="/images/LogoIn.avif"
             alt="Giardino Logo"
-            height={scrolled ? "50" : "65"}
+            height={scrolled ? "65" : "70"}
             className="navbar-logo-img transition-all"
-            style={{ borderRadius: "8px" }}
+            style={{ borderRadius: "18px" }}
           />
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-toggler-custom">
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="navbar-toggler-custom"
+        >
           {expanded ? <X size={28} /> : <MenuIcon size={28} />}
         </Navbar.Toggle>
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-center">
-            <Nav.Link 
-              href="#home" 
+            <Nav.Link
+              href="#home"
               className="nav-link-custom"
               onClick={() => setExpanded(false)}
             >
               {t("Inicio / Home")}
             </Nav.Link>
-            <Nav.Link 
-              href="#menu" 
+            <Nav.Link
+              href="#menu"
               className="nav-link-custom"
               onClick={() => setExpanded(false)}
             >
               {t("Menú / Menu")}
             </Nav.Link>
-            <Nav.Link 
-              href="#info" 
+            <Nav.Link
+              href="#info"
               className="nav-link-custom"
               onClick={() => setExpanded(false)}
             >
               {t("Contacto / Contact")}
             </Nav.Link>
-            
+
             <div className="d-flex align-items-center px-lg-3 py-3 py-lg-0">
-              <button 
-                className={`lang-toggle-btn ${language === 'es' ? 'lang-active' : ''}`}
-                onClick={() => setLanguage('es')}
+              <button
+                className={`lang-toggle-btn ${language === "es" ? "lang-active" : ""}`}
+                onClick={() => setLanguage("es")}
               >
                 ES
               </button>
-              <button 
-                className={`lang-toggle-btn ${language === 'en' ? 'lang-active' : ''}`}
-                onClick={() => setLanguage('en')}
+              <button
+                className={`lang-toggle-btn ${language === "en" ? "lang-active" : ""}`}
+                onClick={() => setLanguage("en")}
               >
                 EN
               </button>
             </div>
 
-            <Nav.Link className="cart-container-mobile ms-lg-4">
-              <button
-                className="cart-button-premium"
-                onClick={() => {
-                  setIsCartOpen(true);
-                  setExpanded(false);
-                }}
-              >
-                <div className="cart-icon-wrapper">
-                  <ShoppingBag size={20} />
-                  {cartCount > 0 && (
-                    <span className="cart-badge-dot">
-                      {cartCount}
-                    </span>
-                  )}
-                </div>
-                <span>{t("Pedido / Order")}</span>
-              </button>
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -109,3 +94,4 @@ const CustomNavbar = () => {
 };
 
 export default CustomNavbar;
+
