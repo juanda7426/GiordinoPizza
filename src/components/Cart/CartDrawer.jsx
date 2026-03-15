@@ -22,6 +22,7 @@ const CartDrawer = () => {
 
   const [showCheckout, setShowCheckout] = useState(false);
 
+  //*********************** */
   const handleOpenCheckout = () => {
     setIsCartOpen(false);
     setShowCheckout(true);

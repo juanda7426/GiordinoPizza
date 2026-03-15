@@ -11,7 +11,7 @@ const FloatingCartButton = () => {
 
   if (cartCount === 0) return null;
 
-  //***************** */
+  //*********************** */
   return (
     <div className="floating-cart-container">
       <button className="floating-cart-btn" onClick={() => setIsCartOpen(true)}>

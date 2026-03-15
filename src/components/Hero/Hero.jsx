@@ -9,7 +9,9 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { t } = useLanguage();
 
+  //*********************** */
   useEffect(() => {
+    console.log(heroSlides);
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 8000);
@@ -19,6 +21,7 @@ const Hero = () => {
   // Function to get Netlify Image CDN URL
   const getOptimizedUrl = (url, w) => {
     if (!url || url.startsWith("http")) return url;
+    if (import.meta.env && import.meta.env.DEV) return url;
     const cleanUrl = url.startsWith("/") ? url : `/${url}`;
     return `/.netlify/images?url=${encodeURIComponent(cleanUrl)}&w=${w}&q=80`;
   };
@@ -86,7 +89,11 @@ const Hero = () => {
             className={`hero-thumb ${currentSlide === index ? "active" : ""}`}
             onClick={() => setCurrentSlide(index)}
           >
-            <img src={getOptimizedUrl(slide.url, 100)} alt={`Thumb ${index}`} loading="lazy" />
+            <img
+              src={getOptimizedUrl(slide.url, 100)}
+              alt={`Thumb ${index}`}
+              loading="lazy"
+            />
           </div>
         ))}
       </div>

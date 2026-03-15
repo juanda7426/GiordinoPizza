@@ -37,6 +37,7 @@ const Info = () => {
                 <Phone size={24} />
               </div>
               <h4>{t("Llámanos / Call Us")}</h4>
+              <span className="mt-3"></span>
               <p>{infoData.phone}</p>
             </div>
           </Col>

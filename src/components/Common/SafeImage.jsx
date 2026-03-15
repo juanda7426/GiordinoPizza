@@ -1,14 +1,26 @@
 import { useState } from "react";
 import "./safeImage.css";
 
-const SafeImage = ({ src, alt, className, style, width, fetchPriority = "auto" }) => {
+const SafeImage = ({
+  src,
+  alt,
+  className,
+  style,
+  width,
+  fetchPriority = "auto",
+}) => {
   const [error, setError] = useState(false);
 
+  //*********************** */
   // Function to get Netlify Image CDN URL
   const getOptimizedUrl = (originalSrc, w) => {
-    if (!originalSrc || originalSrc.startsWith("http") || !w) return originalSrc;
+    if (!originalSrc || originalSrc.startsWith("http") || !w)
+      return originalSrc;
+    if (import.meta.env && import.meta.env.DEV) return originalSrc;
     // Prepend / if not present
-    const cleanSrc = originalSrc.startsWith("/") ? originalSrc : `/${originalSrc}`;
+    const cleanSrc = originalSrc.startsWith("/")
+      ? originalSrc
+      : `/${originalSrc}`;
     return `/.netlify/images?url=${encodeURIComponent(cleanSrc)}&w=${w}&q=75`;
   };
 

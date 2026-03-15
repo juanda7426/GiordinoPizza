@@ -16,6 +16,7 @@ export const CartProvider = ({ children }) => {
     editingItemId: null,
   });
 
+  //*********************** */
   const openModal = (product, mode = "add", editingItemId = null) => {
     setModalState({ isOpen: true, product, mode, editingItemId });
   };
@@ -142,6 +143,7 @@ export const CartProvider = ({ children }) => {
     return acc + price * item.quantity;
   }, 0);
 
+  //*********************** */
   return (
     <CartContext.Provider
       value={{

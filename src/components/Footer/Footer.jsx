@@ -96,7 +96,9 @@ const Footer = ({ infoData }) => {
               href={infoData.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary-color text-decoration-none fw-bold"
+              className="text-decoration-none fw-bold"
+              style={{ color: "#5cc007" }}
+              // style={{ color: "#f3722c" }}
             >
               JuandaCode
             </a>

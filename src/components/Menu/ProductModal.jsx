@@ -34,6 +34,7 @@ const ProductModal = () => {
     0,
   );
 
+  //*********************** */
   useEffect(() => {
     if (product && isOpen) {
       if (mode === "edit" && editingItemId) {

@@ -15,6 +15,7 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
     paymentMethod: "",
   });
 
+  //*********************** */
   const handleInputChange = (e) => {
     setCustomerData({ ...customerData, [e.target.name]: e.target.value });
   };
