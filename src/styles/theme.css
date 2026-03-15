@@ -13,6 +13,7 @@
     var(--secondary-color) 0%,
     var(--primary-color) 100%
   );
+  --jdvcolor: #000000;
 }
 
 .text-gradient {
