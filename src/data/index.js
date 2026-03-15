@@ -793,7 +793,7 @@ export const drinksData = [
   {
     id: 120,
     name: "Cerveza Club Colombia/Club Colombia Beer",
-    description: "Cerveza Club Colombia.",
+    description: "Cerveza Club Colombia./Club Colombia Beer.",
     price: "$10.000",
     image: "images/club.avif",
     category: "Cervezas / Beers",
@@ -801,7 +801,7 @@ export const drinksData = [
   {
     id: 121,
     name: "Cerveza Pilsen/Pilsen Beer",
-    description: "Cerveza Pilsen.",
+    description: "Cerveza Pilsen./Pilsen Beer.",
     price: "$10.000",
     image: "images/pilsen.avif",
     category: "Cervezas / Beers",
@@ -809,7 +809,7 @@ export const drinksData = [
   {
     id: 122,
     name: "Cerveza Aguila/Aguila Beer",
-    description: "Cerveza Aguila.",
+    description: "Cerveza Aguila./Aguila Beer.",
     price: "$10.000",
     image: "images/aguila.avif",
     category: "Cervezas / Beers",
@@ -817,7 +817,7 @@ export const drinksData = [
   {
     id: 123,
     name: "Cerveza Aguila Light/Aguila Light Beer",
-    description: "Cerveza Aguila Light.",
+    description: "Cerveza Aguila Light./Aguila Light Beer.",
     price: "$10.000",
     image: "images/aguilaligh.avif",
     category: "Cervezas / Beers",
