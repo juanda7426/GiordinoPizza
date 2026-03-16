@@ -69,7 +69,8 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$53.000",
     },
-    image: "/images/pizza5.avif",
+    // image: "/images/pizza5.avif",
+    image: "/images/Pizzamediterraneahawaiana.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -83,7 +84,8 @@ export const menuData = [
       Milenium: "$45.000",
       Big: "$55.000",
     },
-    image: "/images/pizza6.avif",
+    // image: "/images/pizza6.avif",
+    image: "/images/Pizzatocinetaahumadamaiz.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -125,7 +127,8 @@ export const menuData = [
       Milenium: "$47.000",
       Big: "$60.000",
     },
-    image: "/images/pizza3.avif",
+    // image: "/images/pizza3.avif",
+    image: "/images/Pizzatocinetaahumadamaiz.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -227,7 +230,8 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$57.000",
     },
-    image: "images/pizza4.avif",
+    // image: "images/pizza4.avif",
+    image: "images/Pizzacolombiana.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -346,7 +350,8 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza6.avif",
+    // image: "images/pizza6.avif",
+    image: "images/Pizzamediterraneahawaiana.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -370,7 +375,8 @@ export const menuData = [
     name: "Lasaña Mixta/Mixed Lasagna",
     description: "Pastas con pollo y carne /Pastas with chicken and meat.",
     price: "$25.000",
-    image: "images/pasta1.avif",
+    // image: "images/pasta1.avif",
+    image: "images/Lasanacarnepolloomixta.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -378,7 +384,8 @@ export const menuData = [
     name: "Lasaña Carne/Meat Lasagna",
     description: "Pasta con carne. / Pasta with meat.",
     price: "$25.000",
-    image: "images/pasta2.avif",
+    // image: "images/pasta2.avif",
+    image: "images/Lasanacarnepolloomixta.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -386,7 +393,8 @@ export const menuData = [
     name: "Lasaña Pollo/Chicken Lasagna",
     description: "Pasta con pollo. / Pasta with chicken.",
     price: "$25.000",
-    image: "images/pasta3.avif",
+    // image: "images/pasta3.avif",
+    image: "images/Lasanacarnepolloomixta.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -413,7 +421,8 @@ export const menuData = [
     description:
       "Espagueti con carne boloñesa. / Spaghetti with bolognese meat.",
     price: "$25.000",
-    image: "images/pasta2.avif",
+    // image: "images/pasta2.avif",
+    image: "images/Espaguetibolognesa.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -547,7 +556,8 @@ export const menuData = [
     description:
       "Maicitos con pollo, tocineta y queso./Corn Chips with chicken, bacon and cheese.",
     price: "$18.000",
-    image: "images/mz1.avif",
+    // image: "images/mz1.avif",
+    image: "images/Maicitospollotocinetaqueso.avif",
     category: "Maicitos / Corn Bites",
   },
   {
@@ -556,7 +566,8 @@ export const menuData = [
     description:
       "Maicitos con pollo, tocineta, queso, ripio de papa, salchicha y salsa de piña. / Corn bits with chicken, bacon, cheese, potato chips, sausage, and pineapple sauce.",
     price: "$20.000",
-    image: "images/mz2.avif",
+    // image: "images/mz2.avif",
+    image: "images/Maicitospollotocinetaqueso.avif",
     category: "Maicitos / Corn Bites",
   },
   // Sanduches
@@ -565,7 +576,8 @@ export const menuData = [
     name: "Sanduche Pollo/Chicken Sandwich",
     description: "Sanduche de pollo./Chicken Sandwich.",
     price: "$16.000",
-    image: "images/snd1.avif",
+    // image: "images/snd1.avif",
+    image: "images/Sanduchepollo.avif",
     category: "Sanduches / Sandwiches",
   },
   {
@@ -626,7 +638,8 @@ export const drinksData = [
     name: "Limonada Cerezada/Cherry Lemonade",
     description: "Limonada cerezada./Cherry Lemonade.",
     price: "$10.000",
-    image: "images/lmn2.avif",
+    // image: "images/lmn2.avif",
+    image: "images/Limonadacereza.avif",
     category: "Bebidas / Beverages",
   },
   {
