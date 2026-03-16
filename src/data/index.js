@@ -366,7 +366,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza7.avif",
+    image: "images/pizza6.avif",
     category: "Pizzas / Pizzas",
   },
   // Pastas
