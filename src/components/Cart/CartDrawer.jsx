@@ -5,6 +5,7 @@ import { Trash2, Plus, Minus, ShoppingBag, Pencil } from "lucide-react";
 import { useState } from "react";
 import CheckoutModal from "./CheckoutModal";
 import Swal from "sweetalert2";
+import { infoData } from "../../data";
 import "./cart.css";
 
 const CartDrawer = () => {
@@ -21,6 +22,11 @@ const CartDrawer = () => {
   const { t, language } = useLanguage();
 
   const [showCheckout, setShowCheckout] = useState(false);
+
+  const isLocal = new URLSearchParams(window.location.search).get('local') === 'true';
+  const rawDeliveryFee = parseInt(infoData.deliveryFee.replace(/[^0-9]/g, "")) || 3000;
+  const deliveryFee = isLocal || cartTotal > 40000 ? 0 : rawDeliveryFee;
+  const finalOrderTotal = cartTotal + deliveryFee;
 
   //*********************** */
   const handleOpenCheckout = () => {
@@ -55,8 +61,14 @@ const CartDrawer = () => {
     const phoneNum = "573207643590";
     let message = `*${t("Nuevo Pedido - Giardino Pizza y Pasta / New Order - Giardino Pizza & Pasta")}*\n\n`;
     message += `*${t("Cliente / Customer")}:* ${customerData.name}\n`;
-    message += `*${t("Dirección / Address")}:* ${customerData.address}\n`;
-    message += `*${t("Barrio / Neighborhood")}:* ${customerData.neighborhood}\n`;
+    
+    if (!isLocal) {
+      message += `*${t("Dirección / Address")}:* ${customerData.address}\n`;
+      message += `*${t("Barrio / Neighborhood")}:* ${customerData.neighborhood}\n`;
+    } else {
+      message += `*(Pedido en Local / Local Order)*\n`;
+    }
+    
     message += `*${t("Teléfono / Phone")}:* ${customerData.phone}\n`;
     message += `*${t("Método de Pago / Payment Method")}:* ${customerData.paymentMethod}\n`;
     if (customerData.notes)
@@ -79,10 +91,23 @@ const CartDrawer = () => {
       if (item.selectedToppings && item.selectedToppings.length > 0) {
         message += `  _${t("Toppings")}:_ ${item.selectedToppings.map((t_item) => t(t_item.name)).join(", ")}\n`;
       }
+      
+      if (item.observations) {
+        message += `  _${t("Observaciones")}:_ ${item.observations}\n`;
+      }
     });
 
-    message += `\n*TOTAL A PAGAR: $${cartTotal.toLocaleString("es-CO")}*\n`;
-    message += `\n*${t("Pedido realizado a través de la página web Giardino Pizza y Pasta / Order placed through the Giardino Pizza & Pasta website")}*`;
+    message += `\n*Subtotal:* $${cartTotal.toLocaleString("es-CO")}\n`;
+    if (!isLocal) {
+      message += `*Costo de Envío:* $${deliveryFee.toLocaleString("es-CO")}\n`;
+    }
+    message += `*TOTAL A PAGAR: $${finalOrderTotal.toLocaleString("es-CO")}*\n`;
+    
+    if (isLocal) {
+      message += `\n*${t("Pedido realizado desde la mesa (QR) / Order placed from table (QR)")}*`;
+    } else {
+      message += `\n*${t("Pedido realizado a través de la página web Giardino Pizza y Pasta / Order placed through the Giardino Pizza & Pasta website")}*`;
+    }
 
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNum}?text=${encoded}`, "_blank");
@@ -149,7 +174,7 @@ const CartDrawer = () => {
 
                           {(item.selectedFlavors ||
                             item.selectedSauces ||
-                            item.selectedToppings) && (
+                            item.selectedToppings || item.observations) && (
                             <div className="toppings-badges-wrapper">
                               {item.selectedFlavors?.map((f) => (
                                 <span key={f.id} className="badge-flavor">
@@ -166,6 +191,11 @@ const CartDrawer = () => {
                                   {t(t_item.name)}
                                 </span>
                               ))}
+                              {item.observations && (
+                                <span className="badge bg-secondary text-white ms-1" style={{ fontSize: "0.7rem", fontWeight: "normal" }}>
+                                  {item.observations}
+                                </span>
+                              )}
                             </div>
                           )}
 
@@ -226,12 +256,30 @@ const CartDrawer = () => {
               </div>
 
               <div className="cart-footer mt-4 border-top pt-4">
-                <div className="d-flex justify-content-between align-items-center mb-4">
+                <div className="d-flex justify-content-between align-items-center mb-2">
+                  <span className="text-muted fw-bold">
+                    {t("Subtotal: ")}
+                  </span>
+                  <span className="fw-bold">
+                    ${cartTotal.toLocaleString("es-CO")}
+                  </span>
+                </div>
+                {!isLocal && (
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <span className="text-muted small">
+                      {t("Domicilio / Delivery:")}
+                    </span>
+                    <span className="small text-muted">
+                      {deliveryFee === 0 ? <span className="text-success fw-bold">{t("Gratis / Free")}</span> : `$${deliveryFee.toLocaleString("es-CO")}`}
+                    </span>
+                  </div>
+                )}
+                <div className="d-flex justify-content-between align-items-center mb-4 mt-2 border-top pt-2">
                   <h5 className="mb-0 fw-bold">
-                    {t("Total del pedido: / Order total:")}
+                    {t("Total a pagar: / Order total:")}
                   </h5>
                   <h4 className="mb-0 fw-black text-primary-color">
-                    ${cartTotal.toLocaleString("es-CO")}
+                    ${finalOrderTotal.toLocaleString("es-CO")}
                   </h4>
                 </div>
 
@@ -259,6 +307,9 @@ const CartDrawer = () => {
         onHide={() => setShowCheckout(false)}
         cart={cart}
         cartTotal={cartTotal}
+        finalOrderTotal={finalOrderTotal}
+        deliveryFee={deliveryFee}
+        isLocal={isLocal}
         onConfirm={sendWhatsApp}
       />
     </>

@@ -1,3 +1,46 @@
+export const infoData = {
+  address: "Carrera 3 Córdoba # 8 - 02, Jardín Antioquia",
+  location:
+    "https://www.google.com/maps/place/Cra.+3+%238-2,+Jard%C3%ADn,+Antioquia/@5.5998871,-75.8228106,17z/data=!3m1!4b1!4m5!3m4!1s0x8e46539d21a4f33d:0x440ef907bbef06c1!8m2!3d5.5998818!4d-75.8202357?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D",
+  phone: "3007256149",
+  email: "giardino-2011@hotmail.com",
+  website: "https://juanda7426.github.io/Juanda-Code/",
+  openingHours: `Lun - Vie: 04pm - 10pm y Sab - Dom: 9am - 10pm / Mon - Fri: 04pm - 10pm and Sat - Sun: 9am - 10pm`,
+  deliveryFee: "$3.000",
+  minOrder: "$40.000",
+  paymentMethods: ["Efectivo", "Tarjeta", "Nequi", "Daviplata", "Bancolombia"],
+  facebook: "https://www.facebook.com/profile.php?id=100054627811119",
+  instagram: "https://www.instagram.com/giardinopizzaypasta/",
+};
+
+export const heroSlides = [
+  {
+    type: "image",
+    title: "La Verdadera Pizza / Real Italian Pizza",
+    highlight: "Artesanal / Artisan",
+    subtitle:
+      "Masa madurada por 48 horas e ingredientes premium seleccionados para brindarte una explosión de sabor italiano en cada bocado. / 48-hour matured dough and premium ingredients selected to give you an explosion of Italian flavor in every bite.",
+    url: "/images/VerdaderaPizza.avif",
+  },
+  {
+    type: "image",
+    title: "Pastas que Enamoran / Pastas to Fall in Love With",
+    highlight: "al Dente",
+    subtitle:
+      "Recetas tradicionales transmitidas por generaciones, preparadas al momento con salsas de la casa y el toque secreto de Giardino. / Traditional recipes handed down through generations, prepared to order with house sauces and the Giardino secret touch.",
+    url: "/images/VerdaderaPasta.avif",
+  },
+  {
+    type: "image",
+    title: "Momentos para / Moments to",
+    highlight: "Compartir / Share",
+    subtitle:
+      "Giardino es el lugar donde la buena comida y la mejor compañía se encuentran. Ven y vive la experiencia Giardino con nosotros. / Giardino is the place where good food and the best company meet. Come and live the Giardino experience with us.",
+    url: "/images/LocalGPP.avif",
+  },
+];
+
+//Menu Data
 export const menuData = [
   // Vegetarianas
   {
@@ -11,7 +54,7 @@ export const menuData = [
       Milenium: "$43.000",
       Big: "$57.000",
     },
-    image: "/images/pizza1.avif",
+    // image: "/images/pizza1.avif",
     category: "Vegetarianas / Vegetarian",
   },
   {
@@ -25,7 +68,7 @@ export const menuData = [
       Milenium: "$43.000",
       Big: "$57.000",
     },
-    image: "/images/pizza2.avif",
+    // image: "/images/pizza2.avif",
     category: "Vegetarianas / Vegetarian",
   },
   {
@@ -39,7 +82,7 @@ export const menuData = [
       Milenium: "$43.000",
       Big: "$57.000",
     },
-    image: "/images/pizza3.avif",
+    // image: "/images/pizza3.avif",
     category: "Vegetarianas / Vegetarian",
   },
   {
@@ -54,7 +97,7 @@ export const menuData = [
       Milenium: "$45.000",
       Big: "$57.000",
     },
-    image: "/images/pizza4.avif",
+    // image: "/images/pizza4.avif",
     category: "Vegetarianas / Vegetarian",
   },
   // Pizzas
@@ -99,7 +142,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$53.000",
     },
-    image: "/images/pizza1.avif",
+    // image: "/images/pizza1.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -113,7 +156,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "/images/pizza2.avif",
+    // image: "/images/pizza2.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -142,7 +185,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza4.avif",
+    // image: "images/pizza4.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -156,7 +199,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza5.avif",
+    // image: "images/pizza5.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -171,7 +214,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza6.avif",
+    // image: "images/pizza6.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -186,7 +229,7 @@ export const menuData = [
       Milenium: "$44.000",
       Big: "$57.000",
     },
-    image: "images/pizza1.avif",
+    // image: "images/pizza1.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -246,7 +289,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza5.avif",
+    // image: "images/pizza5.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -261,7 +304,7 @@ export const menuData = [
       Milenium: "$47.000",
       Big: "$60.000",
     },
-    image: "images/pizza6.avif",
+    // image: "images/pizza6.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -275,7 +318,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza1.avif",
+    // image: "images/pizza1.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -290,7 +333,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza2.avif",
+    // image: "images/pizza2.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -305,7 +348,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza3.avif",
+    // image: "images/pizza3.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -320,7 +363,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza4.avif",
+    // image: "images/pizza4.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -335,7 +378,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza5.avif",
+    // image: "images/pizza5.avif",
     category: "Pizzas / Pizzas",
   },
   {
@@ -366,7 +409,7 @@ export const menuData = [
       Milenium: "$42.000",
       Big: "$55.000",
     },
-    image: "images/pizza6.avif",
+    // image: "images/pizza6.avif",
     category: "Pizzas / Pizzas",
   },
   // Pastas
@@ -403,7 +446,7 @@ export const menuData = [
     description:
       "Pasta rellena de pollo, carne o mixto. / Pasta stuffed with chicken, meat, or mixed.",
     price: "$25.000",
-    image: "images/pasta4.avif",
+    // image: "images/pasta4.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -431,7 +474,7 @@ export const menuData = [
     description:
       "Vegetales en salsa napolitana. / Vegetables in Napolitan sauce.",
     price: "$25.000",
-    image: "images/pasta3.avif",
+    // image: "images/pasta3.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -440,7 +483,7 @@ export const menuData = [
     description:
       "Carne boloñesa, cebolla, tomate, maíz tierno y ají. / Bolognese meat, onion, tomato, corn, and chili pepper.",
     price: "$25.000",
-    image: "images/pasta4.avif",
+    // image: "images/pasta4.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -449,7 +492,7 @@ export const menuData = [
     description:
       "Fetuchini preparado al estilo carbonara tradicional. / Fettuccine prepared in traditional carbonara style.",
     price: "$26.000",
-    image: "images/pasta1.avif",
+    //image: "images/pasta1.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -458,7 +501,7 @@ export const menuData = [
     description:
       "Vegetales salteados en aceite de oliva (pimentón, cebolla, aceitunas, zanahoria, brócoli y parmesano). / Vegetables sautéed in olive oil (pepper, onion, olives, carrot, broccoli, and parmesan).",
     price: "$26.000",
-    image: "images/pasta2.avif",
+    //image: "images/pasta2.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -467,7 +510,7 @@ export const menuData = [
     description:
       "Tortilla de trigo rellena de pollo y champiñones./Wheat tortilla filled with chicken and mushrooms.",
     price: "$25.000",
-    image: "images/pasta3.avif",
+    //image: "images/pasta3.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -476,7 +519,7 @@ export const menuData = [
     description:
       "Tortilla de trigo rellena de carne./Wheat tortilla filled with meat.",
     price: "$25.000",
-    image: "images/pasta4.avif",
+    //image: "images/pasta4.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -485,7 +528,7 @@ export const menuData = [
     description:
       "Tortilla de trigo rellena de jamón y queso./Wheat tortilla filled with ham and cheese.",
     price: "$25.000",
-    image: "images/pasta1.avif",
+    //image: "images/pasta1.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -494,7 +537,7 @@ export const menuData = [
     description:
       "Tortilla de trigo rellena de pollo y carne./Wheat tortilla filled with chicken and meat.",
     price: "$25.000",
-    image: "images/pasta2.avif",
+    //image: "images/pasta2.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -503,7 +546,7 @@ export const menuData = [
     description:
       "Tortilla de trigo rellena de jamón y piña./Wheat tortilla filled with ham and pineapple.",
     price: "$25.000",
-    image: "images/pasta3.avif",
+    //image: "images/pasta3.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -512,7 +555,7 @@ export const menuData = [
     description:
       "Tortilla de trigo rellena de vegetales./Wheat tortilla filled with vegetables.",
     price: "$25.000",
-    image: "images/pasta4.avif",
+    //image: "images/pasta4.avif",
     category: "Pastas / Pasta",
   },
   {
@@ -521,7 +564,7 @@ export const menuData = [
     description:
       "Tortilla de trigo rellena de pollo y champiñones gratinada./Wheat tortilla filled with chicken and mushrooms gratin.",
     price: "$26.000",
-    image: "images/pasta1.avif",
+    //image: "images/pasta1.avif",
     category: "Pastas / Pasta",
   },
   // Hamburguesas
@@ -530,7 +573,7 @@ export const menuData = [
     name: "Hamburguesa De La Casa/House Hamburger",
     description: "Hamburguesa de la casa./House hamburger.",
     price: "$19.000",
-    image: "images/hamb1.avif",
+    //image: "images/hamb1.avif",
     category: "Hamburguesas / Burgers",
   },
   {
@@ -538,7 +581,7 @@ export const menuData = [
     name: "Hamburguesa Sencilla/Simple Hamburger",
     description: "Hamburguesa sencilla./Simple hamburger.",
     price: "$16.000",
-    image: "images/hamb2.avif",
+    //image: "images/hamb2.avif",
     category: "Hamburguesas / Burgers",
   },
   {
@@ -546,7 +589,7 @@ export const menuData = [
     name: "Hamburguesa Doble/Double Hamburger",
     description: "Hamburguesa doble. / Double hamburger.",
     price: "$18.000",
-    image: "images/hamb3.avif",
+    //image: "images/hamb3.avif",
     category: "Hamburguesas / Burgers",
   },
   // Maicitos
@@ -585,7 +628,7 @@ export const menuData = [
     name: "Sanduche Jamón/Ham Sandwich",
     description: "Sanduche de jamón./Ham Sandwich.",
     price: "$14.000",
-    image: "images/snd2.avif",
+    // image: "images/snd2.avif",
     category: "Sanduches / Sandwiches",
   },
   {
@@ -593,7 +636,7 @@ export const menuData = [
     name: "Sanduche Pollo Gratinado/Gratined Chicken Sandwich",
     description: "Sanduche de pollo gratinado./Gratined Chicken Sandwich.",
     price: "$18.000",
-    image: "images/snd1.avif",
+    //image: "images/snd1.avif",
     category: "Sanduches / Sandwiches",
   },
   // Entradas
@@ -602,7 +645,7 @@ export const menuData = [
     name: "Mini Perros/Mini Hot Dogs",
     description: "Mini perros./Mini Hot Dogs.",
     price: "$6.000",
-    image: "images/mhdog.avif",
+    // image: "images/mhdog.avif",
     category: "Entradas / Appetizers",
   },
   {
@@ -610,7 +653,7 @@ export const menuData = [
     name: "Tostaditas Mozzarella Caprese/Caprese Mozzarella Toast",
     description: "Tostaditas mozzarella caprese./Caprese Mozzarella Toast.",
     price: "$12.000",
-    image: "images/tostqueso.avif",
+    //image: "images/tostqueso.avif",
     category: "Entradas / Appetizers",
   },
   {
@@ -618,7 +661,7 @@ export const menuData = [
     name: "Pancito de ajo/Garlic Bread",
     description: "Pancito de ajo./Garlic Bread.",
     price: "$6.000",
-    image: "images/panajo.avif",
+    //image: "images/panajo.avif",
     category: "Entradas / Appetizers",
   },
 ];
@@ -630,7 +673,7 @@ export const drinksData = [
     name: "Limonada Coco/Coconut Lemonade",
     description: "Limonada de coco./Coconut Lemonade.",
     price: "$12.000",
-    image: "images/lmn1.avif",
+    // image: "images/lmn1.avif",
     category: "Bebidas / Beverages",
   },
   {
@@ -647,7 +690,7 @@ export const drinksData = [
     name: "Limonada Natural/Natural Lemonade",
     description: "Limonada natural./Natural Lemonade.",
     price: "$9.000",
-    image: "images/lmn3.avif",
+    //image: "images/lmn3.avif",
     category: "Bebidas / Beverages",
   },
   {
@@ -655,7 +698,7 @@ export const drinksData = [
     name: "Limonada Hierbabuena/Mint Lemonade",
     description: "Limonada de hierbabuena./Mint Lemonade.",
     price: "$10.000",
-    image: "images/lmn1.avif",
+    //image: "images/lmn1.avif",
     category: "Bebidas / Beverages",
   },
   {
@@ -663,7 +706,7 @@ export const drinksData = [
     name: "Limonada Mango/Mango Lemonade",
     description: "Limonada de mango./Mango Lemonade.",
     price: "$10.000",
-    image: "images/lmn2.avif",
+    //image: "images/lmn2.avif",
     category: "Bebidas / Beverages",
   },
   {
@@ -671,7 +714,7 @@ export const drinksData = [
     name: "Limonada Sandia/Watermelon Lemonade",
     description: "Limonada de sandia./Watermelon Lemonade.",
     price: "$10.000",
-    image: "images/lmn3.avif",
+    //image: "images/lmn3.avif",
     category: "Bebidas / Beverages",
   },
   {
@@ -679,7 +722,7 @@ export const drinksData = [
     name: "Limonada Brasileña/Brazilian Lemonade",
     description: "Limonada brasileña./Brazilian Lemonade.",
     price: "$10.000",
-    image: "images/lmn1.avif",
+    //image: "images/lmn1.avif",
     category: "Bebidas / Beverages",
   },
   {
@@ -687,7 +730,7 @@ export const drinksData = [
     name: "Limonada De Verano/Summer Lemonade",
     description: "Limonada de verano./Summer Lemonade.",
     price: "$10.000",
-    image: "images/lmn3.avif",
+    //image: "images/lmn3.avif",
     category: "Bebidas / Beverages",
   },
   {
@@ -695,7 +738,7 @@ export const drinksData = [
     name: "Limonada De Aguacate/Avocado Lemonade",
     description: "Limonada de aguacate./Avocado Lemonade.",
     price: "$10.000",
-    image: "images/lmn2.avif",
+    //image: "images/lmn2.avif",
     category: "Bebidas / Beverages",
   },
   {
@@ -703,7 +746,7 @@ export const drinksData = [
     name: "Limonada Hierbabuena Piña/Mint Pineapple Lemonade",
     description: "Limonada de hierbabuena y piña./Mint Pineapple Lemonade.",
     price: "$12.000",
-    image: "images/lmn1.avif",
+    //image: "images/lmn1.avif",
     category: "Bebidas / Beverages",
   },
   {
@@ -711,7 +754,7 @@ export const drinksData = [
     name: "Milo/Milo",
     description: "Leche con Milo./Milk with Milo.",
     price: "$10.000",
-    image: "images/milo.avif",
+    //image: "images/milo.avif",
     category: "Bebidas / Beverages",
   },
   {
@@ -719,7 +762,7 @@ export const drinksData = [
     name: "Malteada/Milkshake",
     description: "Malteada./Milkshake.",
     price: "$10.000",
-    image: "images/milk.avif",
+    //image: "images/milk.avif",
     category: "Bebidas / Beverages",
   },
   {
@@ -727,7 +770,7 @@ export const drinksData = [
     name: "Gaseosas/Soft Drinks",
     description: "Gaseosas./Soft Drinks.",
     price: "$6.000",
-    image: "images/cocacola.avif",
+    //image: "images/cocacola.avif",
     category: "Bebidas / Beverages",
   },
   // Jugos
@@ -739,7 +782,7 @@ export const drinksData = [
       "En Agua / In Water": "$7.000",
       "En Leche / In Milk": "$8.000",
     },
-    image: "images/jg1.avif",
+    //image: "images/jg1.avif",
     category: "Jugos / Juices",
   },
   {
@@ -751,7 +794,7 @@ export const drinksData = [
       "En Agua / In Water": "$7.000",
       "En Leche / In Milk": "$8.000",
     },
-    image: "images/jg2.avif",
+    //image: "images/jg2.avif",
     category: "Jugos / Juices",
   },
   {
@@ -763,7 +806,7 @@ export const drinksData = [
       "En Agua / In Water": "$7.000",
       "En Leche / In Milk": "$8.000",
     },
-    image: "images/jg3.avif",
+    //image: "images/jg3.avif",
     category: "Jugos / Juices",
   },
   {
@@ -775,7 +818,7 @@ export const drinksData = [
       "En Agua / In Water": "$7.000",
       "En Leche / In Milk": "$8.000",
     },
-    image: "images/jg1.avif",
+    //image: "images/jg1.avif",
     category: "Jugos / Juices",
   },
   {
@@ -787,7 +830,7 @@ export const drinksData = [
       "En Agua / In Water": "$7.000",
       "En Leche / In Milk": "$8.000",
     },
-    image: "images/jg2.avif",
+    //image: "images/jg2.avif",
     category: "Jugos / Juices",
   },
   {
@@ -799,7 +842,7 @@ export const drinksData = [
       "En Agua / In Water": "$7.000",
       "En Leche / In Milk": "$8.000",
     },
-    image: "images/jg3.avif",
+    //image: "images/jg3.avif",
     category: "Jugos / Juices",
   },
   // Cervezas
@@ -837,44 +880,118 @@ export const drinksData = [
   },
 ];
 
-export const infoData = {
-  address: "Carrera 3 Córdoba # 8 - 02, Jardín Antioquia",
-  location:
-    "https://www.google.com/maps/place/Cra.+3+%238-2,+Jard%C3%ADn,+Antioquia/@5.5998871,-75.8228106,17z/data=!3m1!4b1!4m5!3m4!1s0x8e46539d21a4f33d:0x440ef907bbef06c1!8m2!3d5.5998818!4d-75.8202357?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D",
-  phone: "3207643590",
-  email: "giardino-2011@hotmail.com",
-  website: "https://juanda7426.github.io/Juanda-Code/",
-  openingHours: `Lun - Vie: 04pm - 10pm y Sab - Dom: 9am - 10pm / Mon - Fri: 04pm - 10pm and Sat - Sun: 9am - 10pm`,
-};
-
-export const heroSlides = [
+export const toppingsData = [
   {
-    type: "image",
-    title: "La Verdadera Pizza / Real Italian Pizza",
-    highlight: "Artesanal / Artisan",
-    subtitle:
-      "Masa madurada por 48 horas e ingredientes premium seleccionados para brindarte una explosión de sabor italiano en cada bocado. / 48-hour matured dough and premium ingredients selected to give you an explosion of Italian flavor in every bite.",
-    url: "/images/VerdaderaPizza.avif",
+    id: 1,
+    name: "Pepperoni",
+    price: "$2.000",
+    image: "images/epperoni.avif",
   },
   {
-    type: "image",
-    title: "Pastas que Enamoran / Pastas to Fall in Love With",
-    highlight: "al Dente",
-    subtitle:
-      "Recetas tradicionales transmitidas por generaciones, preparadas al momento con salsas de la casa y el toque secreto de Giardino. / Traditional recipes handed down through generations, prepared to order with house sauces and the Giardino secret touch.",
-    url: "/images/VerdaderaPasta.avif",
+    id: 2,
+    name: "Champiñones",
+    price: "$2.000",
   },
   {
-    type: "image",
-    title: "Momentos para / Moments to",
-    highlight: "Compartir / Share",
-    subtitle:
-      "Giardino es el lugar donde la buena comida y la mejor compañía se encuentran. Ven y vive la experiencia Giardino con nosotros. / Giardino is the place where good food and the best company meet. Come and live the Giardino experience with us.",
-    url: "/images/LocalGPP.avif",
+    id: 3,
+    name: "Maíz",
+    price: "$2.000",
+  },
+  {
+    id: 4,
+    name: "Cebolla",
+    price: "$2.000",
+  },
+  {
+    id: 5,
+    name: "Tomate",
+    price: "$2.000",
+  },
+  {
+    id: 6,
+    name: "Pimentón",
+    price: "$2.000",
+  },
+  {
+    id: 7,
+    name: "Jamón",
+    price: "$2.000",
+  },
+  {
+    id: 8,
+    name: "Tocino",
+    price: "$2.000",
+  },
+  {
+    id: 9,
+    name: "Pollo",
+    price: "$2.000",
+  },
+  {
+    id: 10,
+    name: "Carne",
+    price: "$2.000",
+  },
+  {
+    id: 11,
+    name: "Queso",
+    price: "$2.000",
+  },
+  {
+    id: 12,
+    name: "Aceitunas",
+    price: "$2.000",
+  },
+  {
+    id: 13,
+    name: "Piña",
+    price: "$2.000",
+  },
+  {
+    id: 14,
+    name: "Chorizo",
+    price: "$2.000",
+  },
+  {
+    id: 15,
+    name: "Salchicha",
+    price: "$2.000",
   },
 ];
 
-// Keeping these empty to avoid breaking components that import them
-export const toppingsData = [];
-export const saucesData = [];
+export const saucesData = [
+  {
+    id: 1,
+    name: "Salsa de Tomate",
+  },
+  {
+    id: 2,
+    name: "Salsa de Ajo",
+  },
+  {
+    id: 3,
+    name: "Salsa de Champiñones",
+  },
+  {
+    id: 4,
+    name: "Salsa de Cebolla",
+  },
+  {
+    id: 5,
+    name: "Salsa de Tomate",
+  },
+  {
+    id: 6,
+    name: "Salsa de Ajo",
+  },
+  {
+    id: 7,
+    name: "Salsa de Champiñones",
+  },
+  {
+    id: 8,
+    name: "Salsa de Cebolla",
+  },
+];
+
 export const flavorsData = [];

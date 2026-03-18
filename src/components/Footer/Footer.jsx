@@ -17,13 +17,13 @@ const Footer = ({ infoData }) => {
   return (
     <footer id="contact" className="footer-section pt-5 pb-4">
       <Container>
-        <Row className="gy-4">
+        <Row className="gy-4 justify-content-center">
           <Col lg={4} className="text-center text-lg-start">
             <img
               src="images/LogoIn.avif"
               alt="Giardino Logo"
               height="80"
-              className="mb-3"
+              className="mb-3 "
               loading="lazy"
             />
             <p className="footer-description pe-lg-4">
@@ -36,14 +36,21 @@ const Footer = ({ infoData }) => {
               )}
             </p>
             <div className="d-flex justify-content-center justify-content-lg-start gap-3 mt-4">
-              <a href="#" className="social-icon">
+              <a
+                href={infoData.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="social-icon">
+              <a
+                href={infoData.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="social-icon">
-                <Twitter size={20} />
               </a>
             </div>
           </Col>

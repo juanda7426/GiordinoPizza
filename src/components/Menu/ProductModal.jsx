@@ -18,6 +18,7 @@ const ProductModal = () => {
   const [flavorCounts, setFlavorCounts] = useState({}); // { flavorId: count }
   const [extraScoops, setExtraScoops] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [observations, setObservations] = useState("");
 
   const isMultiPrice = product && typeof product.price === "object";
   const hasIceCream = product && product.scoops;
@@ -42,6 +43,7 @@ const ProductModal = () => {
         if (product.selectedToppings)
           setSelectedToppings(product.selectedToppings);
         if (product.selectedSauces) setSelectedSauces(product.selectedSauces);
+        if (product.observations) setObservations(product.observations);
 
         const counts = {};
         (product.selectedFlavors || []).forEach((f) => {
@@ -55,6 +57,7 @@ const ProductModal = () => {
         setSelectedSauces([]);
         setFlavorCounts({});
         setExtraScoops(0);
+        setObservations("");
       }
     }
   }, [product, isOpen, mode, editingItemId, isMultiPrice]);
@@ -123,6 +126,7 @@ const ProductModal = () => {
       sauces: selectedSauces,
       flavors: flavors,
       extraScoopsCount: extraScoops,
+      observations: observations,
       totalPrice: `$${totalPrice.toLocaleString("es-CO")}`,
     };
 
@@ -136,6 +140,9 @@ const ProductModal = () => {
     }
   };
 
+  const categoryLower = product?.category?.toLowerCase() || "";
+  const isDrinkCategory = categoryLower.includes("bebida") || categoryLower.includes("jugo") || categoryLower.includes("cerveza");
+  
   //**************** */
   return (
     <Modal
@@ -279,7 +286,7 @@ const ProductModal = () => {
               </div>
             )}
 
-            {saucesData.length > 0 && (
+            {!isDrinkCategory && saucesData.length > 0 && (
               <div className="mb-4 mt-4">
                 <h6 className="fw-bold mb-3 d-flex justify-content-between">
                   Salsas (Máx. 2):
@@ -306,7 +313,7 @@ const ProductModal = () => {
               </div>
             )}
 
-            {toppingsData.length > 0 && (
+            {!isDrinkCategory && toppingsData.length > 0 && (
               <div className="mb-4">
                 <h6 className="fw-bold mb-3">Toppings adicionales:</h6>
                 <div
@@ -337,6 +344,18 @@ const ProductModal = () => {
                 </div>
               </div>
             )}
+
+            <div className="mb-4">
+              <h6 className="fw-bold mb-2">{t("Observaciones / Observations")}</h6>
+              <textarea
+                className="form-control"
+                rows="2"
+                placeholder={t("Ej. Sin cebolla, extra crujiente... / E.g. No onion, extra crispy...")}
+                value={observations}
+                onChange={(e) => setObservations(e.target.value)}
+                style={{ borderRadius: "10px", resize: "none" }}
+              />
+            </div>
 
             <div
               className="d-flex justify-content-between align-items-center pt-3 border-top sticky-bottom bg-white"

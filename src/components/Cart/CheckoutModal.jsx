@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ArrowLeft, CheckCircle } from "lucide-react";
 import { useLanguage } from "../../context/LanguageContext";
 
-const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
+const CheckoutModal = ({ show, onHide, cart, cartTotal, finalOrderTotal, deliveryFee, isLocal, onConfirm }) => {
   const { t } = useLanguage();
   const [step, setStep] = useState(1);
   const [customerData, setCustomerData] = useState({
@@ -22,10 +22,9 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
 
   const isFormValid =
     customerData.name &&
-    customerData.address &&
     customerData.phone &&
-    customerData.neighborhood &&
-    customerData.paymentMethod;
+    customerData.paymentMethod &&
+    (isLocal || (customerData.address && customerData.neighborhood));
 
   const nextStep = () => setStep(2);
   const prevStep = () => setStep(1);
@@ -94,38 +93,42 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
                   />
                 </Form.Group>
               </Col>
-              <Col md={8}>
-                <Form.Group>
-                  <Form.Label className="small fw-bold">
-                    {t("Dirección de Entrega / Delivery Address")}
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="address"
-                    placeholder={t(
-                      "Ej: Calle 45 # 12-34 / e.g. 45th St # 12-34",
-                    )}
-                    value={customerData.address}
-                    onChange={handleInputChange}
-                    className="custom-input"
-                  />
-                </Form.Group>
-              </Col>
-              <Col md={4}>
-                <Form.Group>
-                  <Form.Label className="small fw-bold">
-                    {t("Barrio / Neighborhood")}
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="neighborhood"
-                    placeholder={t("Ej: Chapinero / e.g. Downtown")}
-                    value={customerData.neighborhood}
-                    onChange={handleInputChange}
-                    className="custom-input"
-                  />
-                </Form.Group>
-              </Col>
+              {!isLocal && (
+                <>
+                  <Col md={8}>
+                    <Form.Group>
+                      <Form.Label className="small fw-bold">
+                        {t("Dirección de Entrega / Delivery Address")}
+                      </Form.Label>
+                      <Form.Control
+                        type="text"
+                        name="address"
+                        placeholder={t(
+                          "Ej: Calle 45 # 12-34 / e.g. 45th St # 12-34",
+                        )}
+                        value={customerData.address}
+                        onChange={handleInputChange}
+                        className="custom-input"
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col md={4}>
+                    <Form.Group>
+                      <Form.Label className="small fw-bold">
+                        {t("Barrio / Neighborhood")}
+                      </Form.Label>
+                      <Form.Control
+                        type="text"
+                        name="neighborhood"
+                        placeholder={t("Ej: Chapinero / e.g. Downtown")}
+                        value={customerData.neighborhood}
+                        onChange={handleInputChange}
+                        className="custom-input"
+                      />
+                    </Form.Group>
+                  </Col>
+                </>
+              )}
               <Col md={12}>
                 <Form.Group>
                   <Form.Label className="small fw-bold">
@@ -194,14 +197,18 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
                     <strong>{t("Cliente / Customer")}:</strong>{" "}
                     {customerData.name}
                   </p>
-                  <p className="mb-1 small">
-                    <strong>{t("Barrio / Neighborhood")}:</strong>{" "}
-                    {customerData.neighborhood}
-                  </p>
-                  <p className="mb-1 small">
-                    <strong>{t("Dir / Address")}:</strong>{" "}
-                    {customerData.address}
-                  </p>
+                  {!isLocal && (
+                    <>
+                      <p className="mb-1 small">
+                        <strong>{t("Barrio / Neighborhood")}:</strong>{" "}
+                        {customerData.neighborhood}
+                      </p>
+                      <p className="mb-1 small">
+                        <strong>{t("Dir / Address")}:</strong>{" "}
+                        {customerData.address}
+                      </p>
+                    </>
+                  )}
                   <p className="mb-1 small">
                     <strong>{t("Tel / Phone")}:</strong> {customerData.phone}
                   </p>
@@ -262,7 +269,7 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
                         {item.selectedToppings &&
                           item.selectedToppings.length > 0 && (
                             <div className="toppings-badges-wrapper">
-                              {item.selectedToppings.map((t) => (
+                              {item.selectedToppings.map((t_item) => (
                                 <span
                                   key={t_item.id}
                                   className="badge-topping"
@@ -273,14 +280,36 @@ const CheckoutModal = ({ show, onHide, cart, cartTotal, onConfirm }) => {
                               ))}
                             </div>
                           )}
+                        {item.observations && (
+                          <div className="toppings-badges-wrapper">
+                            <span
+                              className="badge bg-secondary text-white"
+                              style={{ fontSize: "0.6rem", fontWeight: "normal" }}
+                            >
+                              {item.observations}
+                            </span>
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
-                  <div className="mt-3 pt-2 border-top d-flex justify-content-between fw-bold h5">
-                    <span>TOTAL:</span>
-                    <span className="text-main-pink">
-                      ${cartTotal.toLocaleString("es-CO")}
-                    </span>
+                  <div className="mt-3 pt-2 border-top">
+                    <div className="d-flex justify-content-between mb-1 text-muted small">
+                      <span>Subtotal:</span>
+                      <span>${cartTotal.toLocaleString("es-CO")}</span>
+                    </div>
+                    {!isLocal && (
+                      <div className="d-flex justify-content-between mb-1 text-muted small">
+                        <span>{t("Domicilio / Delivery")}:</span>
+                        <span>{deliveryFee === 0 ? <span className="text-success fw-bold">{t("Gratis / Free")}</span> : `$${deliveryFee.toLocaleString("es-CO")}`}</span>
+                      </div>
+                    )}
+                    <div className="d-flex justify-content-between mt-2 pt-2 border-top fw-bold h5">
+                      <span>TOTAL:</span>
+                      <span className="text-main-pink">
+                        ${finalOrderTotal.toLocaleString("es-CO")}
+                      </span>
+                    </div>
                   </div>
                 </Col>
               </Row>
